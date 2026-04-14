@@ -966,15 +966,17 @@ section {
     flex-direction: column;
     position: fixed;
     top: 0;
-    left: 0;
+    left: auto;
     right: 0;
-    bottom: 0;
+    bottom: 0px;
     z-index: 1000;
     background: rgba(253, 246, 238, 0.97);
     backdrop-filter: blur(20px);
     align-items: center;
     justify-content: center;
-    gap: 36px;
+    gap: 13px;
+    width: 50%;
+    height: 50%;
 }
 
     .mobile-menu.open {
@@ -983,7 +985,7 @@ section {
 
     .mobile-menu a {
         font-family: 'Syne', sans-serif;
-        font-size: 28px;
+        font-size: 15px;
         font-weight: 800;
         color: var(--navy);
         text-decoration: none;
