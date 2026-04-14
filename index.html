@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+                
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="logo"><span>CHAR</span>LES</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#projects" onclick="toggleMenu()">Projects</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="home">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    Hi, I'm<br>
+                    <span class="accent">Charles</span><br>
+                    Francis.
+                </h1>
+                <p class="hero-sub">Software Engineer</p>
+                <p class="hero-desc">
+                   A simple guy who knows how to code.
+                </p>
+                <div class="hero-btns">
+                    <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+                    <button class="btn-outline" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About Me</button>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/charles-francis-mangaron3488303a9/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/selrahcTech" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="avatar-ring">
+                    <div class="avatar-inner">CF</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="about-grid">
+            <!-- Left -->
+            <div class="about-left">
+                <div class="section-label">About Me</div>
+                <div class="about-name">Charles Francis<br><span>Mangaron</span></div>
+                <p>
+                    I'm a Software Engineer based in Cebu, Philippines with hands-on experience building and maintaining web applications. I take pride in writing clean, maintainable code and collaborating effectively with teams.
+                </p>
+                <p>
+                    I graduated with a Bachelor of Science in Information Technology from St. Cecilia's College-Cebu and have since gained real-world experience as a Software Engineer and intern.
+                </p>
+                <a href="mailto:charlesfrancismangar@gmail.com" class="contact-pill">
+                    <i class="fas fa-envelope"></i> charlesfrancismangaron@gmail.com
+                </a>
+
+                <div style="margin-top: 32px;">
+                    <div class="section-label" style="margin-bottom: 16px;">Links</div>
+                    <div class="links-row">
+                        <a class="link-card" href="https://www.linkedin.com/in/charles-francis-mangaron3488303a9/" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a class="link-card" href="https://github.com/selrahcTech" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div style="margin-top: 32px;">
+                    <div class="section-label" style="margin-bottom: 16px;">Skills</div>
+                    <div class="skills-cloud">
+                        <span class="skill-chip">HTML</span>
+                        <span class="skill-chip">CSS</span>
+                        <span class="skill-chip">PHP</span>
+                        <span class="skill-chip">ASP.NET</span>
+                        <span class="skill-chip">MySQL</span>
+                        <span class="skill-chip">phpMyAdmin</span>
+                        <span class="skill-chip">Visual Basic</span>
+                        <span class="skill-chip">Web Development</span>
+                        <span class="skill-chip">System Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right -->
+            <div class="about-right">
+                <div class="timeline-section">
+                    <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                    <div class="timeline">
+                        <div class="tl-item">
+                            <div class="tl-period">June 2024 – March 2026</div>
+                            <div class="tl-role">Software Engineer</div>
+                            <div class="tl-company">Dolphin's I.T. Services</div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-period">March 2024 – June 2024</div>
+                            <div class="tl-role">Software Engineer Intern</div>
+                            <div class="tl-company">Style Assembly Multimedia Studios</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="timeline">
+                        <div class="tl-item">
+                            <div class="tl-period">2020 – 2024</div>
+                            <div class="tl-role">BS Information Technology</div>
+                            <div class="tl-company">St. Cecilia's College-Cebu, Inc.</div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-period">2018 – 2020</div>
+                            <div class="tl-role">Senior High School</div>
+                            <div class="tl-company">St. Cecilia's College-Cebu, Inc.</div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-period">2015 – 2018</div>
+                            <div class="tl-role">Junior High School</div>
+                            <div class="tl-company">Tungkil National Highschool</div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-period">2011 – 2013</div>
+                            <div class="tl-role">Elementary</div>
+                            <div class="tl-company">University of the Visayas Minglanilla Campus</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+
+    <!--water works-->
+    <section id="projects">
+        <div class="projects-header">
+            <h2 class="section-title"><span class="accent">Projects</span></h2>
+            <p class="section-desc">Some projects I collab with.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-thumb thumb-1">
+                    <span class="project-emoji"></span>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">ASP.NET</span>
+                        <span class="project-tag">Microsoft SQL Server</span>
+                        <span class="project-tag">VB.NET</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">Javascript</span>
+                        <span class="project-tag">Telerik UI</span>
+                       
+                    </div>
+                    <div class="project-name">WATERWORKS INFORMATION SYSTEM - WEB APPLICATION</div>
+                    <p class="project-desc">A web-based information system for managing waterwork operations and billing.</p>
+                    <p class="project-client">Miwassco, Bowssco — Cebu Branch</p>
+                    <div class="project-links">
+                        <a class="proj-link" href="https://github.com/selrahcTech" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--sales-->
+            <div class="project-card">
+                <div class="project-thumb thumb-1">
+                    <span class="project-emoji"></span>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">ASP.NET</span>
+                        <span class="project-tag">Microsoft SQL Server</span>
+                        <span class="project-tag">VB.NET</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">Javascript</span>
+                        <span class="project-tag">Telerik UI</span>
+                       
+                    </div>
+                    <div class="project-name">SALES AND INVENTORY MANAGEMENT SYSTEM - WEB APPLICATION</div>
+                    <p class="project-desc">A comprehensive multi-branch sales and inventory platform built for real-time business operations.</p>
+                    <p class="project-client">Ethan's Appliance Center — Surigao Del Sur </p>
+                    <div class="project-links">
+                        <a class="proj-link" href="https://github.com/selrahcTech" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--school-->
+            <div class="project-card">
+                <div class="project-thumb thumb-1">
+                    <span class="project-emoji"></span>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">ASP.NET</span>
+                        <span class="project-tag">Microsoft SQL Server</span>
+                        <span class="project-tag">VB.NET</span>
+                        <span class="project-tag">Telerik UI</span>
+                       
+                    </div>
+                    <div class="project-name">SCHOOL MANAGEMENT SYSTEM - DESKTOP APPLICATION</div>
+                    <p class="project-desc">A web-based information system for managing waterwork operations and billing.</p>
+                    <p class="project-client">St. Cecilia's College-Cebu, Inc. - Minglanilla, Cebu</p>
+                    <div class="project-links">
+                        <a class="proj-link" href="https://github.com/selrahcTech" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-thumb thumb-1">
+                    <span class="project-emoji"></span>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">MPHPMyadmin</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">Javascript</span>
+                       
+                    </div>
+                    <div class="project-name">REPAIR AND MAINTENANCE SERVICES MANAGEMENT SYSTEM - WEB APPLICATION</div>
+                    <p class="project-desc">
+                        A web-based system for repair and maintenance services with POS, sales orders, attendance,
+                        inventory, and accounting management.
+                    </p>
+                    <p class="project-client">REHUB Cebu Home Repair and Maintenance Services — Cebu</p>
+                    <div class="project-links">
+                        <a class="proj-link" href="https://github.com/selrahcTech" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+
+       </div>   
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-label">Let's Connect</div>
+        <h2 class="section-title">Get in <span class="accent">Touch</span></h2>
+        <p class="section-desc">Contact Me</p>
+
+        <div class="contact-cards">
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+                <a href="mailto:charlesfrancismangaron@gmail.com">charlesfrancismangaron.com</a>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/charles-francis-mangaron3488303a9/" target="_blank">charles-francis-mangaron</a>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+                <a href="https://github.com/selrahcTech" target="_blank">selrahcTech</a>
+            </div>
+        </div>
+
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/charles-francis-mangaron3488303a9/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/selrahcTech" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:charlesfrancismangaron@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <p class="footer-copy">© 2026 <span>Charles Francis Mangaron</span></p>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+
+        // Scroll-reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.tl-item, .project-card, .skill-chip, .contact-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
