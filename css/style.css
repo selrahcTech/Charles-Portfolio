@@ -979,7 +979,7 @@ section {
     justify-content: center;
     gap: 15px;
     width: 40%;
-    height: 40%;
+    height: 30%;
     transform: translateX(100%);
     opacity: 0;
     pointer-events: none;
@@ -993,7 +993,7 @@ section {
 }
     .mobile-menu a {
         font-family: 'Syne', sans-serif;
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 800;
         color: var(--navy);
         text-decoration: none;
