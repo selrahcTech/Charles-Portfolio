@@ -58,7 +58,7 @@
                 </h1>
                 <p class="hero-sub">Software Engineer</p>
                 <p class="hero-desc">
-                   A simple guy who knows how to code.
+                    A passionate developer who enjoys building clean and efficient solutions.
                 </p>
                 <div class="hero-btns">
                     <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
@@ -120,6 +120,7 @@
                         <span class="skill-chip">HTML</span>
                         <span class="skill-chip">CSS</span>
                         <span class="skill-chip">PHP</span>
+                        <span class="skill-chip">Javascript</span>
                         <span class="skill-chip">ASP.NET</span>
                         <span class="skill-chip">MySQL</span>
                         <span class="skill-chip">phpMyAdmin</span>
@@ -292,37 +293,57 @@
 
     <!-- CONTACT -->
     <section id="contact">
-        <div class="section-label">Let's Connect</div>
-        <h2 class="section-title">Get in <span class="accent">Touch</span></h2>
-        <p class="section-desc">Contact Me</p>
+    <div class="section-label">Let's Connect</div>
+    <h2 class="section-title">Contact <span class="accent">Me</span></h2>
 
-        <div class="contact-cards">
-            <div class="contact-card">
-                <i class="fab fa-facebook"></i>
-                <span>Facebook</span>
-                <a href="https://www.facebook.com/charles.mangaron.5">charles-francis-mangaron</a>
-            </div>
-            <div class="contact-card">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-                <a href="https://github.com/selrahcTech" target="_blank">selrahcTech</a>
-            </div>
-            <div class="contact-card">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-                <a href="https://www.linkedin.com/in/charles-francis-mangaron-3488303a9/" target="_blank">charles-francis-mangaron</a>
-            </div>
-            
+    <div class="contact-container">
+
+        <!-- LEFT: CONTACT FORM -->
+        <div class="contact-form">
+            <form onsubmit="sendMail(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
 
-        <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/charles-francis-mangaron-3488303a9/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/selrahcTech" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.facebook.com/charles.mangaron.5" target="_blank"><i class="fab fa-facebook"></i></a>
+        <!-- RIGHT: CONTACT CARDS -->
+        <div class="contact-right">
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                    <a href="https://www.facebook.com/charles.mangaron.5">francis-charles</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                    <a href="https://github.com/selrahcTech" target="_blank">selrahcTech</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/charles-francis-mangaron-3488303a9/" target="_blank">
+                        charles-francis-mangaron
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <p class="footer-copy">© 2026 <span>Charles Francis Mangaron</span></p>
-    </section>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/charles-francis-mangaron-3488303a9/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/selrahcTech"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/charles.mangaron.5"><i class="fab fa-facebook"></i></a>
+    </div>
+
+    <p class="footer-copy">© 2026 <span>Charles Francis Mangaron</span></p>
+</section>
 
     <script>
         function toggleMenu() {
@@ -345,6 +366,25 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+
+        function sendMail(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let subject = encodeURIComponent("Portfolio Contact from " + name);
+    let body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n\n" +
+        message
+    );
+
+    window.location.href = 
+        `https://mail.google.com/mail/?view=cm&fs=1&to=charlesfrancismangaron@gmail.com&su=${subject}&body=${body}`;
+}
+
     </script>
 </body>
 </html>
