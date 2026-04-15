@@ -940,6 +940,98 @@ section {
         color: var(--purple);
     }
 
+    /* NEW: 2-column layout */
+.contact-container {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+/* LEFT: FORM */
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--latte);
+    background: rgba(255,255,255,0.1);
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: none;
+}
+
+/* BUTTON */
+.contact-form button {
+    background: var(--latte);
+    color: black;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.contact-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-right .contact-cards {
+    flex-direction: flex;
+    align-items: center;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-form,
+    .contact-right {
+        width: 100%;
+    }
+}
+
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
     from {
