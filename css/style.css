@@ -994,12 +994,13 @@ section {
     z-index: 1000;
     background: rgba(253, 246, 238, 0.97);
     backdrop-filter: blur(20px);
-    align-items: left;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 25px;
     width: 50%;
     height: 100vh;
     transform: translateX(100%);
+    padding-top: 100px;
     opacity: 0;
     pointer-events: none;
     transition: transform 0.4s ease, opacity 0.3s ease;
@@ -1013,27 +1014,43 @@ section {
     .mobile-menu a {
         font-family: 'Syne', sans-serif;
         font-size: 12px;
-        font-weight: 800;
+        font-weight: 750;
         padding-left: 20px;
         color: var(--navy);
         text-decoration: none;
         transition: color 0.2s;
     }
 
-        .mobile-menu a:hover {
-            color: var(--purple);
-        }
+      .mobile-menu b {
+        font-family: 'Syne', sans-serif;
+        font-size: 12px;
+        font-weight: 800;
+        padding-left: 20px;
+        color: var(--navy);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    
+    .mobile-menu a:hover {
+        color: var(--purple);
+    }
 
-.mobile-close {
+
+    .mobile-close {
     position: absolute;
     top: 20px;
-    right: 24px;
+    left: 0;         
+    width: 100%;     
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px 0 0;  
     background: none;
     border: none;
-    font-size: 28px;
+    font-size: 20px;
     cursor: pointer;
     color: var(--navy);
-}
+    }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
